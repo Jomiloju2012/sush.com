@@ -32,5 +32,36 @@ circle()
 
  
 
+def check_attendance(student_name, attendance_record):
 
+  
+    if student_name in attendance_record:
+            is_present = attendance_record[student_name]
+        if is_present:
+            return f"{student_name} is Present."
+        else:
+            return f"{student_name} is Absent."
+   else:
+        
+        return f"{student_name} was not found in the attendance record."
+
+class_attendance = {
+    "Alice": True,
+    "Bob": False,
+    "Charlie": True,
+    "David": False
+}
+
+
+student1 = "Alice"
+print(check_attendance(student1, class_attendance))
+
+student2 = "Bob"
+print(check_attendance(student2, class_attendance))
+student3 = "Eve"
+print(check_attendance(student3, class_atdance))
+
+
+class_attendance["Eve"] = True 
+print(check_attendance("Eve", class_attendance))
              
